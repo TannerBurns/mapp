@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/font-awesome4/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <script>window.$ = window.jQuery = require('../../../node_modules/jquery/dist/jquery.min.js');</script>
+        <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../../node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src='../static/js/index_renderer.js'></script>
+        <meta charset="UTF-8">
+        <title>Electron App</title>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="statusMessage"></div>
+                    <br>
+                    <form class="form" name="ipcForm" onSubmit="JavaScript:sendLogin(event)">
+                        <div class="row">
+                            <div class="input-group col-sm-12">
+                                <span class="input-group-text fa fa-user fa-2x"></span>
+                                <input id="username" type="text" class="form-control" name="username" placeholder="Username">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="input-group col-sm-12">
+                                <span class="input-group-text fa fa-lock fa-2x"></span>
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <button class="btn btn-outline-primary my-2 my-sm-0 col-sm-4 offset-sm-4"    type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>  
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/font-awesome4/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="../static/css/search.css">-->
+        <script>window.$ = window.jQuery = require('../../../node_modules/jquery/dist/jquery.min.js');</script>
+        <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../../node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../static/js/shared.js"></script>
+        <script src="../static/js/search.js"></script>
+        <meta charset="UTF-8">
+        <title>Electron App</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <div class="col-md-1">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./home.html"><span class="fa fa-home fa-2x"></span></a>
+                        </li>
+                    </div>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <div class="col-md-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profile.html"><span class="fa fa-user fa-2x"></span></a>
+                        </li>
+                    </div>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" onSubmit="JavaScript:sendLogout(event)">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+                </form>
+            </div>
+        </nav>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1">
+                    <div class="col-md-1">
+                        <form class="form-inline" action="./search.html">
+                            <button class="btn btn-success" type="submit"><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+                    <br>
+                    <div class="col-md-1">
+                        <form class="form-inline" action="./player.html">
+                            <button class="btn btn-primary" type="submit"><span class="fa fa-user-plus"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="offset-sm-3">
+                        <form class="form" onSubmit="JavaScript:search(event)">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input id="search-players" class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                </div>
+                                <div class="col-sm-2">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <br>
+                    <table id="player-table" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
