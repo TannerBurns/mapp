@@ -24,16 +24,20 @@ ipcMain.on('logout', function (event, arg) {
 ipcMain.on('checkin-player', function (event, arg) {
     client.checkinPlayer(function(resp){
         if (resp[0]) {
-            console.log("checked in", resp[1].time_played)
-            event.sender.send('player-checkedin', resp[1].time_played)
+            event.sender.send('player-checkedin', resp[1].checkedin_time)
         }
     });
 });
 
-ipcMain.on('checkin-player', function (event, arg) {
+ipcMain.on('checkout-player', function (event, arg) {
     client.checkoutPlayer(function(resp){
         if (resp[0]) {
             event.sender.send('player-checkedout', null)
+            client.getPlayerMembership( function(resp) {
+                if (resp[0]) {
+                    event.sender.send('load-player-membership', resp[1])
+                }
+            });
         };
     });
 });
