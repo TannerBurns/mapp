@@ -57,6 +57,23 @@
                 </div>
                 <div class="col-md-6">
                     <div class="input-group">
+                        <div class="col-sm-2">
+                            <form onSubmit="JavaScript:checkin(event)">
+                                <button id="checkin-player" class="btn btn-success" type="submit">Check In</button>
+                            </form>
+                        </div>
+                        <div class="col-sm-2">
+                            <form onSubmit="JavaScript:checkout(event)">
+                                <button id="checkout-player" class="btn btn-danger" type="submit">Check Out</button>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                                <span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="input-group">
                         <span class="input-group-text col-sm-1">ID</span>
                         <input id="id" type="text" class="form-control" name="id" value="">
                         <span class="input-group-text col-sm-1-1">First</span>

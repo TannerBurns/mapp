@@ -21,6 +21,22 @@ ipcMain.on('logout', function (event, arg) {
     window.Logout()
 });
 
+ipcMain.on('checkin-player', function (event, arg) {
+    client.checkinPlayer(function(resp){
+        if (resp[0]) {
+            console.log("checked in", resp[1].time_played)
+            event.sender.send('player-checkedin', resp[1].time_played)
+        }
+    });
+});
+
+ipcMain.on('checkin-player', function (event, arg) {
+    client.checkoutPlayer(function(resp){
+        if (resp[0]) {
+            event.sender.send('player-checkedout', null)
+        };
+    });
+});
 
 ipcMain.on('home-loaded', function (event, pwd) {
     client.getEmployee( function(resp) {
