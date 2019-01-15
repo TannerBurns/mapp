@@ -62,9 +62,21 @@ ipcMain.on('player-profile-loaded', function(event, arg) {
             client.getPlayerMembership( function(resp) {
                 if (resp[0]) {
                     event.sender.send('load-player-membership', resp[1])
-                }
+                    client.getRoster( function(resp){
+                        if (resp[0]) {
+                            if (resp[1].roster) {
+                                for (var opt, j = 0; opt = resp[1].roster[j]; j++) {
+                                    if (opt.player_id == client.getPlayerID()){
+                                        event.sender.send('player-checkedin', opt.checkedin_time);
+                                        break;
+                                    };
+                                };
+                            }; 
+                        };
+                    });
+                };
             });
-        }
+        };
     });
 });
 
@@ -120,6 +132,7 @@ ipcMain.on('load-player-profile', function(event, arg){
 });
 
 ipcMain.on('get-player', function(event, arg) {
+    event.sender.send('clear-player-table', null);
     client.setPlayerID(arg)
     client.getPlayer(function(resp) {
         if (resp[0]) {
@@ -129,10 +142,13 @@ ipcMain.on('get-player', function(event, arg) {
 });
 
 ipcMain.on('search-players', function(event, arg) {
+    event.sender.send('clear-player-table', null);
     client.search(arg.split(" ")[0], arg.split(" ")[1], function(resp) {
         if (resp[0]) {
-            event.sender.send('load-player-table', resp[1].players)
-        }
+            for (j=0; j<resp[1].players.length;j++) {
+                event.sender.send('load-player-table', resp[1].players[j])
+            };
+        };
     });
 });
 

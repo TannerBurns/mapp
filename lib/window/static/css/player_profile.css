@@ -1,0 +1,35 @@
+.input-group-text {
+    background: #FFFFFF;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+}
+
+#hour, 
+#min {
+    font-size: 72px;
+}
+
+#sec {
+    font-size: 54px;
+}
+
+#amount, 
+#playtime {
+    font-size: 48px;
+}
+
+#amount-label,
+#playtime-label {
+    font-size: 32px;
+}
+
+#checkin-timer-label {
+    font-size: 32px;
+}
+
+hr {
+    color: #000;
+    height: 3px;
+}
