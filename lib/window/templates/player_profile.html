@@ -59,7 +59,7 @@
                     <div class="row">
                         <div class="col-sm-2-1 offset-1">
                             <div class="card" style="width:200px">
-                                <img class="card-img-top" src="../static/img/wizard.png" alt="Card image">
+                                <img class="card-img-top" src="../static/img/test.png" alt="Card image">
                                 <div class="card-body">
                                     <div class="input-group">
                                         <span class="input-group-text col-sm-2 fa fa-user fa-3x"></span>
@@ -85,7 +85,7 @@
                             <input id="alias" type="text" class="form-control" name="alias" value="">
                             <br>
                             <div class="input-group">
-                                <span class="input-group-text col-sm-1">Email</i></span>
+                                <span class="input-group-text col-sm-2">Email</i></span>
                                 <input id="email" type="text" class="form-control" name="email" value="">
                                 <span class="input-group-text col-sm-2-1">Phone</i></span>
                                 <input id="phone" type="text" class="form-control" name="phone" value="">
@@ -98,23 +98,23 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="row">
-                                <div>
+                                <div class="col-sm-8">
                                     <label id="checkin-timer-label" class="input-group-text">&nbspPlayer Timer</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div>
+                                <div class="col-sm-4">
                                     <span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-sm-2-1">
+                                <div class="col-sm-4">
                                     <form onSubmit="JavaScript:checkin(event)">
                                         <button id="checkin-player" class="btn btn-success" type="submit">Check In</button>
                                     </form>
                                 </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-4">
                                     <form onSubmit="JavaScript:checkout(event)">
                                         <button id="checkout-player" class="btn btn-danger" type="submit">Check Out</button>
                                     </form>
@@ -123,17 +123,17 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="input-group">
-                                <label id="amount-label" class="input-group-text col-sm-4-3">Amount Owed:</label>
-                                <label id="playtime-label" class="input-group-text col-sm-4-3 offset-sm-2">Time Owed:</label>
+                                <label id="playtime-label" class="col-sm-6">Time Owed:</label>
+                                <label id="amount-label" class="col-sm-6">Amount Owed:</label>
                             </div>
                             <div class="input-group">
-                                <span id="amount" class="col-sm-4"></span>
-                                <span id="playtime" class="col-sm-4 offset-sm-2"><span id="pt-hour"></span>:<span id="pt-min"></span>:<span id="pt-sec"></span></span>
+                                <span id="playtime" class="col-sm-7"><span id="pt-hour"></span>:<span id="pt-min"></span>:<span id="pt-sec"></span></span>
+                                <span id="amount" class="col-sm-2"></span>
                             </div>
                             <br>
                             <div class="input-group">
-                                <label class="input-group-text col-sm-1">Type</label>
-                                <select id="payment-type" class="col-sm-2">
+                                <label class="input-group-text col-sm-2">Type</label>
+                                <select id="payment-type" class="col-sm-2-1">
                                     <option value="Cash">Cash</option>
                                     <option value="Paypal">Paypal</option>
                                 </select>
@@ -490,5 +490,6 @@
                 </div>
             </div>
         </div>
+        <br><br><br>
     </body>
 </html>
