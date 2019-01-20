@@ -42,7 +42,7 @@ ipcMain.on('checkout-player', function (event, arg) {
     });
 });
 
-ipcMain.on('home-loaded', function (event, pwd) {
+ipcMain.on('profile-loaded', function (event, pwd) {
     client.getEmployee( function(resp) {
         if (resp[0]) {
             event.sender.send('load-profile', resp[1])
@@ -147,6 +147,19 @@ ipcMain.on('search-players', function(event, arg) {
         if (resp[0]) {
             for (j=0; j<resp[1].players.length;j++) {
                 event.sender.send('load-player-table', resp[1].players[j])
+            };
+        };
+    });
+});
+
+ipcMain.on('home-loaded', function (event, pwd) {
+    event.sender.send('clear-player-roster-table', null);
+    client.getRoster( function(resp) {
+        if (resp[0]) {
+            if (resp[1].roster) {
+                for(i=0; i<resp[1].roster.length;i++) {
+                    event.sender.send('load-player-roster-table', resp[1].roster[i])
+                }
             };
         };
     });

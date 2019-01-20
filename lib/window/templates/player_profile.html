@@ -55,39 +55,46 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-9 offset-md-2">
                     <div class="row">
                         <div class="col-sm-2-1 offset-1">
                             <div class="card" style="width:200px">
-                                <img class="card-img-top" src="../static/img/test.png" alt="Card image">
+                                <div id="card-b64-image"></div>
                                 <div class="card-body">
                                     <div class="input-group">
-                                        <span class="input-group-text col-sm-2 fa fa-user fa-3x"></span>
-                                        <input id="id" type="text" class="form-control" name="id" value="">
+                                        <span class="col-sm-2 fa fa-user fa-2x"></span>
+                                        <div id="id" class="col-sm-1"></div>
                                     </div>
                                     <br>
                                     <div class="input-group">
-                                        <label class="input-group-text col-sm-8">Member</label>
-                                        <select id="active">
-                                            <option value="false">No</option>
-                                            <option value="true">Yes</option>
-                                        </select>
+                                        <span class="col-sm-2 fa fa-tag fa-2x"></span>
+                                        <div id="membership" class="col-sm-8"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <span class="input-group-text col-sm-1-1">First</span>
-                            <input id="firstname" type="text" class="form-control" name="firstname" value="">
-                            <span class="input-group-text col-sm-1-1">Last</i></span>
-                            <input id="lastname" type="text" class="form-control" name="lastname" value="">
-                            <span class="input-group-text col-sm-1-1">Alias</i></span>
-                            <input id="alias" type="text" class="form-control" name="alias" value="">
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <span class="input-group-text col-sm-6">First</i></span>
+                                <span class="input-group-text col-sm-6">Last</i></span> 
+                            </div>
+                            <div class="input-group">
+                                <input id="firstname" type="text" class="form-control col-sm-6" name="firstname" value="">
+                                <input id="lastname" type="text" class="form-control col-sm-6" name="lastname" value="">
+                            </div>
                             <br>
                             <div class="input-group">
-                                <span class="input-group-text col-sm-2">Email</i></span>
+                                <span class="input-group-text col-sm-2">Alias</i></span>
+                                <input id="alias" type="text" class="form-control" name="alias" value="">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-text col-sm-2">@</i></span>
                                 <input id="email" type="text" class="form-control" name="email" value="">
-                                <span class="input-group-text col-sm-2-1">Phone</i></span>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-text col-sm-2">#</i></span>
                                 <input id="phone" type="text" class="form-control" name="phone" value="">
                             </div>
                         </div>
@@ -96,9 +103,9 @@
                     <hr class="col-sm-5 offset-sm-1">
                     <br>
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="row">
-                                <div class="col-sm-8">
+                                <div>
                                     <label id="checkin-timer-label" class="input-group-text">&nbspPlayer Timer</label>
                                 </div>
                             </div>
@@ -121,10 +128,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 offset-sm-1">
                             <div class="input-group">
                                 <label id="playtime-label" class="col-sm-6">Time Owed:</label>
-                                <label id="amount-label" class="col-sm-6">Amount Owed:</label>
+                                <label id="amount-label">Amount Owed:</label>
                             </div>
                             <div class="input-group">
                                 <span id="playtime" class="col-sm-7"><span id="pt-hour"></span>:<span id="pt-min"></span>:<span id="pt-sec"></span></span>
@@ -168,14 +175,14 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <div class="input-group">
-                                <span class="input-group-text col-sm-1">Birthday</i></span>
+                                <span class="input-group-text col-sm-2-1">Birthday</i></span>
                                 <input id="birthday" type="date" class="form-control" name="birthday" value="">
                                 <span class="input-group-text col-sm-2-1">Joined</i></span>
                                 <input id="joined" type="date" class="form-control" name="joined" value="">
                             </div>
                             <br>
                             <div class="input-group">
-                                <span class="input-group-text col-sm-1">Address</i></span>
+                                <span class="input-group-text col-sm-2-1">Address</i></span>
                                 <input id="address" type="text" class="form-control" name="address" value="">
                             </div>
                             <br>

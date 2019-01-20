@@ -3,7 +3,6 @@
     <head>
         <link rel="stylesheet" href="../static/css/font-awesome4/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../static/css/player.css">
         <script>window.$ = window.jQuery = require('../../../node_modules/jquery/dist/jquery.min.js');</script>
         <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../../../node_modules/popper.js/dist/popper.min.js"></script>
@@ -373,17 +372,29 @@
                     </div>
                     <br>
                     <div class="input-group">
+                        <input id="select-file" class="btn btn-outline-primary col-sm-3" type="button" value="Choose profile picture" />
+                        <div  class="col-sm-2 offset-7">
+                            <form class="form-inline my-2 my-lg-0" onSubmit="JavaScript:submitPlayer(event)">
+                                <button id="submit-profile" class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <div id="player-image">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-group">
                         <div class="row">
-                            <div  class="col-sm-3">
-                                <form class="form-inline my-2 my-lg-0" onSubmit="JavaScript:submitPlayer(event)">
-                                    <button id="submit-profile" class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
-                                </form>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    
+                    <div style="display: none;">
+                        <textarea id="actual-image" value=""></textarea>
+                    </div>
                 </div>
             </div>
         </div>

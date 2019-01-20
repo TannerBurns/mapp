@@ -9,6 +9,7 @@
         <script src="../../../node_modules/popper.js/dist/popper.min.js"></script>
         <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="../static/js/shared.js"></script>
+        <script src="../static/js/home.js"></script>
         <meta charset="UTF-8">
         <title>Electron App</title>
     </head>
@@ -40,19 +41,38 @@
         </nav>
         <br>
         <div class="container-fluid">
-            <div class="col-md-1">
-                <form class="form-inline" action="./search.html">
-                    <button class="btn btn-success" type="submit"><span class="fa fa-search"></span></button>
-                </form>
-            </div>
-            <br>
-            <div class="col-md-1">
-                <form class="form-inline" action="./player.html">
-                    <button class="btn btn-primary" type="submit"><span class="fa fa-user-plus"></span></button>
-                </form>
-            </div>
-            <div class="col-md-10">
-
+            <div class="row">
+                <div class="col-md-1">
+                    <div class="col-md-1">
+                        <form class="form-inline" action="./search.html">
+                            <button class="btn btn-success" type="submit"><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+                    <br>
+                    <div class="col-md-1">
+                        <form class="form-inline" action="./player.html">
+                            <button class="btn btn-primary" type="submit"><span class="fa fa-user-plus"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div id="player-roster" class="col-sm-5">
+                            <h2>Roster (Checked In)</h2>
+                            <br>
+                            <table id="player-roster-table" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Time Checked In</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
