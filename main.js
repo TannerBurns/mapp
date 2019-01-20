@@ -145,8 +145,10 @@ ipcMain.on('search-players', function(event, arg) {
     event.sender.send('clear-player-table', null);
     client.search(arg.split(" ")[0], arg.split(" ")[1], function(resp) {
         if (resp[0]) {
-            for (j=0; j<resp[1].players.length;j++) {
-                event.sender.send('load-player-table', resp[1].players[j])
+            if (resp[1].players) {
+                for (j=0; j<resp[1].players.length;j++) {
+                    event.sender.send('load-player-table', resp[1].players[j])
+                };
             };
         };
     });
