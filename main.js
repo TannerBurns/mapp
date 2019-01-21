@@ -131,19 +131,9 @@ ipcMain.on('load-player-profile', function(event, arg){
     window.PlayerProfile()
 });
 
-ipcMain.on('get-player', function(event, arg) {
-    event.sender.send('clear-player-table', null);
-    client.setPlayerID(arg)
-    client.getPlayer(function(resp) {
-        if (resp[0]) {
-            event.sender.send('load-player-table', [resp[1]])
-        }
-    });
-});
-
 ipcMain.on('search-players', function(event, arg) {
     event.sender.send('clear-player-table', null);
-    client.search(arg.split(" ")[0], arg.split(" ")[1], function(resp) {
+    client.search(arg, function(resp) {
         if (resp[0]) {
             if (resp[1].players) {
                 for (j=0; j<resp[1].players.length;j++) {
@@ -154,7 +144,7 @@ ipcMain.on('search-players', function(event, arg) {
     });
 });
 
-ipcMain.on('home-loaded', function (event, pwd) {
+ipcMain.on('home-loaded', function (event, arg) {
     event.sender.send('clear-player-roster-table', null);
     client.getRoster( function(resp) {
         if (resp[0]) {
