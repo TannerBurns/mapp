@@ -21,11 +21,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <div class="col-md-1">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./home.html"><span class="fa fa-home fa-2x"></span></a>
-                        </li>
-                    </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./home.html"><span class="fa fa-home fa-2x"></span></a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <div class="col-md-1">
@@ -42,35 +40,36 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-1">
-                    <div class="col-md-1">
-                        <form class="form-inline" action="./search.html">
-                            <button class="btn btn-success" type="submit"><span class="fa fa-search"></span></button>
-                        </form>
-                    </div>
-                    <br>
-                    <div class="col-md-1">
-                        <form class="form-inline" action="./player.html">
-                            <button class="btn btn-primary" type="submit"><span class="fa fa-user-plus"></span></button>
-                        </form>
+                <div class="col-md-3 offset-sm-1">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form class="form-inline" action="./search.html">
+                                <button id="app-icons" tooltip="Search Players" class="btn btn-success" type="submit"><span class="fa fa-search fa-3x"></span></button>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-inline" action="./player.html">
+                                <button id="app-icons" tooltip="New Player" class="btn btn-primary" type="submit"><span class="fa fa-user-plus fa-3x"></span></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-10">
-                    <div id="player-roster" class="col-sm-5">
-                            <h2>Roster (Checked In)</h2>
-                            <br>
-                            <table id="player-roster-table" class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Time Checked In</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
+                <div class="col-md-6">
+                    <div id="player-roster">
+                        <h2>Roster (Checked In)</h2>
+                        <br>
+                        <table id="player-roster-table" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Time Checked In</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
