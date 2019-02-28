@@ -27,4 +27,4 @@
         
         checkin/checkout players
         time to amount owed conversions
-        
+        search by ID, Name, Email, Phone Number
